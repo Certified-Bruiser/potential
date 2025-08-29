@@ -37,6 +37,8 @@ potential-calculator/
 │── package.json         # Project dependencies & scripts
 │── README.md            # Project documentation
 
+---
+
 
 ## 📑 File Information
 
