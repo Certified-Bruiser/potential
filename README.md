@@ -38,3 +38,12 @@ potential-calculator/
 │── package.json         # Project dependencies & scripts
 │── README.md            # Project documentation
 
+## 📑 File Information
+
+| File           | Description |
+|----------------|-------------|
+| `App.jsx`      | Acts as the **router/controller** of the app. Decides whether to show the welcome page (`firstpage.jsx`) or the calculator (`AppCJS.jsx`) based on state. |
+| `firstpage.jsx`| The **entry / welcome page** of the app. Introduces the tool and provides a button to start the calculator. |
+| `AppCJS.jsx`   | Contains the **calculator logic & UI** where users can perform calculations. |
+| `AppC.css`     | Defines the **styling rules** for the calculator component and its UI elements. |
+| `index.js`     | CRA’s entry file. Mounts the `App` component into the DOM (`root` div in `public/index.html`). |
