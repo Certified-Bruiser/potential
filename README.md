@@ -22,8 +22,9 @@ Built with **React + Vite** for fast, modern frontend development.
 
 ---
 
-## ⚡ Project Structure
+## 📂 Project Structure
 
+```plaintext
 potential-calculator/
 │── public/              # Static assets (favicon, index.html, etc.)
 │── src/                 # Application source code
@@ -37,5 +38,3 @@ potential-calculator/
 │── package.json         # Project dependencies & scripts
 │── README.md            # Project documentation
 
-git clone https://github.com/username/potential-calculator.git
-cd potential-calculator
