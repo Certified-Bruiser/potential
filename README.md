@@ -10,7 +10,6 @@ Built with **React + Vite** for fast, modern frontend development.
 - [Project Structure](#-project-structure)
 - [File Information](#-file-information)
 
-
 ---
 
 ## 🛠 Tech Stack
@@ -38,10 +37,10 @@ potential-calculator/
 │── package.json         # Project dependencies & scripts
 │── README.md            # Project documentation
 
----
 
 ## 📑 File Information
 
+```
 | File            | Purpose                                                                 |
 |-----------------|-------------------------------------------------------------------------|
 | **`App.jsx`**   | Main controller of the app. Handles navigation between pages (welcome & calculator). |
