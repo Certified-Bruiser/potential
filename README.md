@@ -1,22 +1,23 @@
 # ⚙️ Potential Calculator
 
-A tool for all the Bodyshops across India who wish to unlock their BodyShop Business's Full Potential
+A tool for Bodyshops across India to unlock their BodyShop Business's full potential.  
+This project is built with **React + Vite** for fast, modern frontend development.
 
 ---
 
 ## 📂 Table of Contents
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [Roadmap](#roadmap)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Available Scripts](#-available-scripts)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [Roadmap](#-roadmap)
+- [License](#-license)
+- [Acknowledgements](#-acknowledgements)
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠 Tech Stack
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -25,11 +26,11 @@ A tool for all the Bodyshops across India who wish to unlock their BodyShop Busi
 
 ---
 
-## ⚡ Installation
+## ⚡ Getting Started
 
-Clone the repo and install dependencies:
+Follow these steps to run the project locally:
 
+### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/username/project-name.git
-cd project-name
-npm install   # or pip install -r requirements.txt
+git clone https://github.com/username/potential-calculator.git
+cd potential-calculator
