@@ -1,19 +1,15 @@
 # ⚙️ Potential Calculator
 
 A tool for Bodyshops across India to unlock their BodyShop Business's full potential.  
-This project is built with **React + Vite** for fast, modern frontend development.
+Built with **React + Vite** for fast, modern frontend development.
 
 ---
 
 ## 📂 Table of Contents
 - [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-- [Available Scripts](#-available-scripts)
 - [Project Structure](#-project-structure)
-- [Contributing](#-contributing)
-- [Roadmap](#-roadmap)
-- [License](#-license)
-- [Acknowledgements](#-acknowledgements)
+- [File Information](#-file-information)
+
 
 ---
 
@@ -26,11 +22,20 @@ This project is built with **React + Vite** for fast, modern frontend developmen
 
 ---
 
-## ⚡ Getting Started
+## ⚡ Project Structure
 
-Follow these steps to run the project locally:
+potential-calculator/
+│── public/              # Static assets (favicon, index.html, etc.)
+│── src/                 # Application source code
+│   ├── assets/          # Images, icons, and other static files
+│   ├── components/      # Reusable React components
+│   ├── App.jsx          # Main app component (controls navigation)
+│   ├── firstpage.jsx    # Entry / Welcome page
+│   ├── AppCJS.jsx       # Calculator logic & UI
+│   ├── AppC.css         # Styles for the calculator
+│   ├── index.js         # React entry point (renders App into DOM)
+│── package.json         # Project dependencies & scripts
+│── README.md            # Project documentation
 
-### 1️⃣ Clone the repository
-```bash
 git clone https://github.com/username/potential-calculator.git
 cd potential-calculator
