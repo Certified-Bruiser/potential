@@ -37,12 +37,10 @@ potential-calculator/
 │── package.json         # Project dependencies & scripts
 │── README.md            # Project documentation
 
----
-
-
-## 📑 File Information
 
 ```
+## 📑 File Information
+
 | File            | Purpose                                                                 |
 |-----------------|-------------------------------------------------------------------------|
 | **`App.jsx`**   | Main controller of the app. Handles navigation between pages (welcome & calculator). |
