@@ -18,9 +18,13 @@ const data = {
 };
 
 function formatIndian(value) {
-  if (value >= 10000000) return Math.floor(value / 10000000) + "Cr";
-  if (value >= 100000) return Math.floor(value / 100000) + "L";
-  if (value >= 1000) return Math.floor(value / 1000) + "K";
+  function format(num) {
+    return parseFloat(num.toFixed(3)).toString(); // up to 3 decimals, trims zeros
+  }
+
+  if (value >= 10000000) return format(value / 10000000) + "Cr";
+  if (value >= 100000) return format(value / 100000) + "L";
+  if (value >= 1000) return format(value / 1000) + "K";
   return value.toString();
 }
 
