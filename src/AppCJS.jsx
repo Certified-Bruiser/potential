@@ -107,9 +107,9 @@ export default function Calculator() {
 
         {results && (
           <div id="results">
-            <div className="result-box">🔧 Repairs/Month: {results.repairs}</div>
-            <div className="result-box">🧰 Labour Sales/Month: ₹{results.labour}</div>
-            <div className="result-box">🛠️ Parts Sales/Month: ₹{results.parts}</div>
+            <div className="result-box">🔧 Repairs Per Month: {results.repairs}</div>
+            <div className="result-box">🧰 Labour Revenue: ₹{results.labour}</div>
+            <div className="result-box">🛠️ Parts Sales Per Month: ₹{results.parts}</div>
           </div>
         )}
       </div>
