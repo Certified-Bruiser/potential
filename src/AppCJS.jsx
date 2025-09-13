@@ -90,7 +90,7 @@ export default function Calculator() {
         </select>
 
         <label htmlFor="service">
-          Monthly average Service (All types)+ BP Load of past six months
+          Monthly average Service (All types) + BP Load of past six months
         </label>
         <input
           type="number"
