@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./AppC.css";
+import ContactModal from "./ContactModal.jsx";
+import Header from "./Header.jsx";
 
 const data = {
   Luxury: {
@@ -7,7 +9,7 @@ const data = {
     "City B": { collision_rate: 0.60, per_car_labour: 45000, per_car_sales: 85000 },
     "City C": { collision_rate: 0.48, per_car_labour: 35000, per_car_sales: 100000 },
     "City D": { collision_rate: 0.36, per_car_labour: 35000, per_car_sales: 100000 },
-  }, 
+  },
   "Mass Market": {
     "City A": { collision_rate: 0.84, per_car_labour: 14000, per_car_sales: 9000 },
     "City B": { collision_rate: 0.72, per_car_labour: 12500, per_car_sales: 9000 },
@@ -29,6 +31,7 @@ function formatIndian(value) {
 }
 
 export default function Calculator() {
+  const [showModal, setShowModal] = useState(false);
   const [brand, setBrand] = useState("");
   const [city, setCity] = useState("");
   const [service, setService] = useState("");
@@ -67,52 +70,60 @@ export default function Calculator() {
   };
 
   return (
-    <div className="calculator-page">
-      <h1 className="logo">BodyshopGuru</h1>
-      <div className="container">
-        <h2>Bodyshop Potential Calculator</h2>
+    <>
+      {/* Fixed header */}
+      <Header onContactClick={() => setShowModal(true)} />
 
-        <label htmlFor="brand">Car Brand Type</label>
-        <select id="brand" value={brand} onChange={(e) => setBrand(e.target.value)}>
-          <option value="" disabled>Select your Brand Type</option>
-          <option>Luxury</option>
-          <option>Mass Market</option>
-        </select>
+      {/* Contact modal */}
+      {showModal && <ContactModal onClose={() => setShowModal(false)} />}
 
-        <label htmlFor="city">City Category</label>
-        <select id="city" value={city} onChange={(e) => setCity(e.target.value)}>
-          <option value="" disabled>Select a city</option>
-          <option>City A</option>
-          <option>City B</option>
-          <option>City C</option>
-          <option>City D</option>
-          <option>City E</option>
-        </select>
+      {/* Calculator section */}
+      <div className="calculator-page">
+        <div className="container">
+          <h2>Bodyshop Potential Calculator</h2>
 
-        <label htmlFor="service">
-          Monthly average Service (All types) + BP Load of past six months
-        </label>
-        <input
-          type="number"
-          id="service"
-          min="0"
-          placeholder="Enter a number"
-          value={service}
-          onChange={(e) => setService(e.target.value)}
-        />
+          <label htmlFor="brand">Car Brand Type</label>
+          <select id="brand" value={brand} onChange={(e) => setBrand(e.target.value)}>
+            <option value="" disabled>Select your Brand Type</option>
+            <option>Luxury</option>
+            <option>Mass Market</option>
+          </select>
 
-        <button onClick={calculate}>Calculate Your Potential</button>
+          <label htmlFor="city">City Category</label>
+          <select id="city" value={city} onChange={(e) => setCity(e.target.value)}>
+            <option value="" disabled>Select a city</option>
+            <option>City A</option>
+            <option>City B</option>
+            <option>City C</option>
+            <option>City D</option>
+            <option>City E</option>
+          </select>
 
-        {error && <div className="error">{error}</div>}
+          <label htmlFor="service">
+            Monthly average Service (All types) + BP Load of past six months
+          </label>
+          <input
+            type="number"
+            id="service"
+            min="0"
+            placeholder="Enter a number"
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+          />
 
-        {results && (
-          <div id="results">
-            <div className="result-box">🔧 Repairs Per Month: {results.repairs}</div>
-            <div className="result-box">🧰 Labour Revenue: ₹{results.labour}</div>
-            <div className="result-box">🛠️ Parts Sales Per Month: ₹{results.parts}</div>
-          </div>
-        )}
+          <button onClick={calculate}>Calculate Your Potential</button>
+
+          {error && <div className="error">{error}</div>}
+
+          {results && (
+            <div id="results">
+              <div className="result-box">🔧 Repairs Per Month: {results.repairs}</div>
+              <div className="result-box">🧰 Labour Revenue: ₹{results.labour}</div>
+              <div className="result-box">🛠️ Parts Sales Per Month: ₹{results.parts}</div>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
